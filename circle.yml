@@ -23,7 +23,7 @@ jobs:
         keys:
         # Default branch if not
         - source-v2-{{ .Branch }}-{{ .Revision }}
-        - source-v2-{{ .Branch }}-
+        #- source-v2-{{ .Branch }}-
         - source-v2-
     # Machine Setup
     #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
@@ -80,7 +80,8 @@ jobs:
         - vendor/bundle
         - ~/virtualenvs
         - ~/.m2
-        - ~/.ivy2
+        - ~/.sbt
+        - ~/.ivy2/cache
         - ~/.bundle
         - ~/.go_workspace
         - ~/.gradle
